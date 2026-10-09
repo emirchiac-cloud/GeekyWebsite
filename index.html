@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geeky BZ - Your Ultimate Pop Culture Store</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/parallax.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+
+            <div class="logo-area" id="main-logo">
+                <img src="img/Geeky-Bz-Logo (1).png" alt="Company Logo">
+            </div>
+            <div class="header-title">
+                <h1><span style="color: #ab04e8;">Geeky</span> BZ</h1>
+            </div>
+            <div class="search-bar" style="display: flex; align-items: center;">
+                <input type="text" id="searchInput" placeholder="Search products..."
+                    style="padding: 8px 15px; border-radius: 20px; border: 1px solid #ddd; outline: none; width: 200px;">
+                <button type="button" id="searchBtn"
+                    style="background: none; border: none; font-size: 18px; color: #333; cursor: pointer; margin-left: -35px;"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#Items">Shop All <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="enamel.html">Bricks <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="keychains.html">Keychains</a></li>
+
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PARALLAX BACKGROUND -->
+    <svg class="parallax" viewBox="0 0 750 500" preserveAspectRatio="xMidYMax slice">
+        <defs>
+            <linearGradient id="grad1" x1="-154.32" y1="263.27" x2="-154.32" y2="374.3"
+                gradientTransform="matrix(-1, 0, 0, 1.36, 231.36, -100.14)" gradientUnits="userSpaceOnUse">
+                <stop offset="0.07" stop-color="#d094f8" />
+                <stop offset="0.98" stop-color="#ab04e8" />
+            </linearGradient>
+            <radialGradient id="bg_grad" cx="375" cy="-30" r="318.69" gradientUnits="userSpaceOnUse">
+                <stop offset="0.1" stop-color="#f9f0ff" id="sun" />
+                <stop offset="0.15" stop-color="#eed5ff" />
+                <stop offset="0.2" stop-color="#e1b7ff" />
+                <stop offset="0.3" stop-color="#d094f8" />
+                <stop offset="0.5" stop-color="#c082ee" />
+                <stop offset="0.8" stop-color="#ab04e8" />
+            </radialGradient>
+            <linearGradient id="grad2" x1="242.5" y1="356.25" x2="750" y2="356.25" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#e1b7ff" />
+                <stop offset="0.98" stop-color="#ab04e8" />
+            </linearGradient>
+            <!-- ... (keeping other gradients the same but I'll update the key colors to soft pinks in CSS or here if I want deeper integration) ... -->
+            <linearGradient id="grad3" x1="467.26" y1="500" x2="467.26" y2="225.47" gradientUnits="userSpaceOnUse">
+                <stop offset="0.01" stop-color="#eed5ff" />
+                <stop offset="1" stop-color="#69108e" />
+            </linearGradient>
+            <!-- ... -->
+        </defs>
+
+        <rect id="bg" width="750" height="500" opacity="0.4" fill="url(#bg_grad)" />
+        <!-- (Keeping the SVG paths for clouds, hills etc for the parallax effect) -->
+        <g id="clouds" fill="#fefefe" opacity="0.6">
+            <path id="cloud4" transform='translate(600 0)'
+                d="M402.34,341.68c9.9-10.24,23.76-7.43,36.05-5.48C448,332,458.88,329,468.9,334c-.95-7.91,8.65-14.92,15.9-11.61-3.34-11.77,13-13.9,20.53-8.34A13.53,13.53,0,0,1,522,310.16c2.64-18.11,27.85-24.13,38.38-9.17,3.54-5.51,12.12-6.88,17.2-2.74,6.59-43.22,70.78-27.93,65.83,12.62,14.7-4.43,32,6.72,34.08,21.93,5.76-2.23,29.28,1,21.76,9.26" />
+            <path id="cloud3" transform='translate(600 0)'
+                d="M382.94,363.16c-7-10.5-18.72-9.06-28.19-4.53-12.19-6.71-26.73-11.74-39.62-3.13,1-15.45-18-25.51-28-12.41-14.59-29.67-56.68-34.41-72-3.09-1.41,4-4.73,6.07-8.1,2.88-23.13-25.66-57.12-30.25-67.73,8.21-13.05-1.88-33.42-9.15-37.47,10.07a38.08,38.08,0,0,0-36.36,2.11" />
+            <path id="cloud2" transform='translate(-600 0)'
+                d="M506.86,233.56c9.62-3.21,23.27-4,33.88-2.17,0-5.7,10.4-6.68,14-3.58,10.32-12.45,29.93-5.12,40.08,0,10.06-6.52,27.67-9.72,33.93,2.42,5.53-.13,15.88-3.23,18.8,2.94a31.53,31.53,0,0,1,18.21.64" />
+            <path id="cloud1" transform='translate(-600 0)'
+                d="M402.18,271.3c-7.57-7.46-18.46-7.52-28.05-5.3-6.75-8.79-20.54-13.18-27.24-1.45-10.4-11.06-30.66-24.2-37.74-2.24a13.1,13.1,0,0,0-17.76,1.47c-11.23-25.69-58.46-41.29-64.24-4.06-9-8.26-20.15-2.62-27.47,4.4-11-2.87-22.18-7.58-31.72,2.7-8.44-.75-18.1-2.8-24.71,4.57" />
+        </g>
+        <!-- (Omitting BATs and other Halloween stuff for now or keeping but hiding) -->
+        <g id="scene2" style="opacity: 0.5;">
+            <g id="hills2">
+                <path id="h2-6"
+                    d="M524.28,418.82c6.36,0,80.19-14.81,103.12-36.53S655.28,345.8,679,359.64s33.69,18.54,46.63,18.82a158.62,158.62,0,0,1,23.88,2.4V447L632,458.92Z"
+                    fill="#dca3ff" />
+                <path id="h2-2"
+                    d="M749.55,500V398.27l-38.48-6.67s-29.86,12.13-63,11.53-39.61-7.26-70.33-13.41-72.58,21.4-105.61,21.4-75.5-17.78-110.64-17.78c-24.85,0-90.08,20.12-110.82,18.48s-51.11-20.42-82-6.26S.47,409.26.47,409.26V500Z"
+                    fill="#ab04e8" />
+            </g>
+        </g>
+    </svg>
+
+    <div class="scrollElement"></div>
+
+    <div class="parallax-wrapper">
+        <section class="hero-banner" id="home">
+            <div class="banner-content">
+                <div class="banner-image-container">
+                    <div class="hero-bg-text">GEEKY BELIZE</div>
+                    <img src="img/Geeky-Wave.png" alt="Geeky BZ Mascot" class="floating-mascot">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="best-sellers" id="best-sellers">
+            <div class="section-container">
+                <h2 class="section-title">Best Sellers</h2>
+                <div class="best-sellers-grid">
+                    <div class="product-card-mini">
+
+                        <img src="products/figure (1).jpeg" alt="Product">
+                        <h3>Turbo Granny Figure</h3>
+                        <p class="price">BZ$35.00 BZD</p>
+                        <a class="btn-add" href="figures.html"
+                            style="text-decoration: none; text-align: center; display: block; padding: 8px 16px; background: #ab04e8; color: #fff; border-radius: 8px; font-weight: 700; margin-top: 10px;">View</a>
+                    </div>
+                    <div class="product-card-mini">
+
+                        <img src="products/figure (5).jpeg" alt="Product">
+                        <h3>Light Yagami Figure</h3>
+                        <p class="price">BZ$15.00 BZD</p>
+                        <a class="btn-add" href="figures.html"
+                            style="text-decoration: none; text-align: center; display: block; padding: 8px 16px; background: #ab04e8; color: #fff; border-radius: 8px; font-weight: 700; margin-top: 10px;">View</a>
+                    </div>
+                    <div class="product-card-mini">
+                        <img src="products/figure (2).jpeg" alt="Product">
+                        <h3>Armin Arlert Figure</h3>
+                        <p class="price">BZ$12.00 BZD</p>
+                        <a class="btn-add" href="figures.html"
+                            style="text-decoration: none; text-align: center; display: block; padding: 8px 16px; background: #ab04e8; color: #fff; border-radius: 8px; font-weight: 700; margin-top: 10px;">View</a>
+                    </div>
+                    <div class="product-card-mini">
+
+                        <img src="products/figure (3).jpeg" alt="Product">
+                        <h3>Keisuke Baji Figure</h3>
+                        <p class="price">BZ$8.00 BZD</p>
+                        <a class="btn-add" href="figures.html"
+                            style="text-decoration: none; text-align: center; display: block; padding: 8px 16px; background: #ab04e8; color: #fff; border-radius: 8px; font-weight: 700; margin-top: 10px;">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="Items" class="categories-section">
+            <div class="section-container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-slider">
+
+                    <div class="category-card-mini">
+                        <a href="figures.html">
+                            <img src="img/logofigure.webp" alt="Figures">
+                            <span>Figures</span>
+                        </a>
+                    </div>
+
+
+                    <div class="category-card-mini">
+                        <a href="trading.html">
+                            <img src="img/cardslogo.webp" alt="Trading Cards">
+                            <span>Trading Cards</span>
+                        </a>
+                    </div>
+
+
+                    <div class="category-card-mini">
+                        <a href="keychains.html">
+                            <img src="img/keychainlogo.jpg" alt="Keychains">
+                            <span>Keychains</span>
+                        </a>
+                    </div>
+
+
+                    <div class="category-card-mini">
+                        <a href="button.html">
+                            <img src="img/penlogo.jpg" alt="Button Pins">
+                            <span>Pens</span>
+                        </a>
+                    </div>
+
+                    <!-- Enamel Pins -->
+                    <div class="category-card-mini">
+                        <a href="enamel.html">
+                            <img src="img/brickslogo.jpg" alt="Enamel Pins">
+                            <span>Bricks</span>
+                        </a>
+                    </div>
+
+
+
+                    <!-- Lanyards -->
+                    <div class="category-card-mini">
+                        <a href="lanyards.html">
+                            <img src="img/lanyardlogo.webp" alt="Lanyards">
+                            <span>Lanyards</span>
+                        </a>
+                    </div>
+
+
+
+                    <!-- Accessories -->
+                    <div class="category-card-mini">
+                        <a href="accessories.html">
+                            <img src="products/bracelet (1).jpeg" alt="Accessories">
+                            <span style="font-family: 'Fredoka', sans-serif;">Accessories</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="reviews-section">
+            <div class="section-container">
+                <h2>Let customers speak for us!</h2>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="https://www.instagram.com/geekybz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    class="reviews-link">check out our reviews on instagram</a>
+
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content glass-card">
+                <span>The Story of Geeky BZ</span>
+                <h2>Crafting a Universe for Every Fan</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Founded in the heart of Belize, Geeky BZ was born from a simple passion: to bring the worlds
+                            of comics, anime, and gaming closer to the people who love them. We aren't just a store; we
+                            are a community of dreamers, collectors, and fans.</p>
+                        <p>Every figure on our shelves and every comic in our collection is handpicked to ensure it
+                            meets the highest standards of quality.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/geekyabout.jpeg" alt="Geeky BZ Story"
+                            style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>Unique Items</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Authenticity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="about-section contact-section">
+            <div class="about-content glass-card">
+                <span>Connect with Us</span>
+                <h2>Join the Geek Community</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Gmail</h4>
+                        <p><a href="mailto:geekybz@gmail.com">geekybz501@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Contact</h4>
+                        <p><a href="tel:+5016200000">+501 601-1230</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-share-alt"></i>
+                        <h4>Socials</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Geekybz1" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/geekybz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@geekybz?is_from_webapp=1&sender_device=pc"
+                                target="_blank"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="side-nav">
+            <a href="#home" class="side-nav-item active">
+                <span class="side-nav-label">Home</span>
+                <div class="side-nav-dot"></div>
+            </a>
+            <a href="#best-sellers" class="side-nav-item">
+                <span class="side-nav-label">Best Sellers</span>
+                <div class="side-nav-dot"></div>
+            </a>
+            <a href="#Items" class="side-nav-item">
+                <span class="side-nav-label">Categories</span>
+                <div class="side-nav-dot"></div>
+            </a>
+            <a href="#about" class="side-nav-item">
+                <span class="side-nav-label">About Us</span>
+                <div class="side-nav-dot"></div>
+            </a>
+            <a href="#contact" class="side-nav-item">
+                <span class="side-nav-label">Contact</span>
+                <div class="side-nav-dot"></div>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 <span class="text-danger" style="font-weight: 800;">Geeky BZ</span> Belize. All rights
+                reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+
+        // GSAP Scroll Reveal for Cards
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".category-card-mini, .product-card-mini").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: i % 4 * 0.1, // Stagger effect
+                ease: "power2.out"
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll("div[id], section[id]");
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            document.querySelectorAll(".side-nav-item").forEach(a => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

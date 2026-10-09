@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Pins - Geeky BZ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #eed5ff 0%, #f3e5f5 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin-bottom: 30px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        color: #ab04e8;
+        transform: translateX(-5px);
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        transition: .3s;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+    }
+
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ab04e8;
+        color: #fff;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 30px;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(171, 4, 232, 0.3);
+    }
+
+    .img-box {
+        height: 250px;
+        overflow: hidden;
+        background: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .img-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform .5s ease;
+    }
+
+    .card:hover .img-box img {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    .info {
+        padding: 25px;
+    }
+
+    .cat {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ab04e8;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #333;
+        margin: 0 0 12px;
+        line-height: 1.2;
+    }
+
+    .desc {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .price {
+        font-size: 22px;
+        font-weight: 800;
+        color: #333;
+    }
+
+    .btn {
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ab04e8;
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1 style="font-weight: 800; margin-bottom: 40px; color: #333;">Pen Collection</h1>
+    </div>
+
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="badge">New</div>
+            <div class="img-box">
+                <img src="products/pencils (1).jpeg" alt="Button Pen Set 1">
+            </div>
+            <div class="info">
+                <div class="cat"> San rio Pen</div>
+                <h2 class="title">Hello Kitty Pen</h2>
+                <p class="desc">Classic Hello Kitty pen featuring bold Hello Kitty artwork.</p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/pencils (2).jpeg" alt="Button Pen Set 2">
+            </div>
+            <div class="info">
+                <div class="cat"> San rio Pen</div>
+                <h2 class="title">Hello Kitty Pen</h2>
+                <p class="desc">Eye-catching Hello kitty pen
+                </p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="badge">Sale</div>
+            <div class="img-box">
+                <img src="products/pencils (3).jpeg" alt="Button Pen Set 3">
+            </div>
+            <div class="info">
+                <div class="cat">San rio Pen</div>
+                <h2 class="title">Hello Kitty Pen</h2>
+                <p class="desc">Hello kitty pink pen</p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/pencils (4).jpeg" alt="Button Pen Set 4">
+            </div>
+            <div class="info">
+                <div class="cat">San Rio Pen</div>
+                <h2 class="title">Hello Kitty Pen</h2>
+                <p class="desc">Hello kitty with a blue bow </p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="badge">Rare</div>
+            <div class="img-box">
+                <img src="products/pencils (5).jpeg" alt="Button Pen Set 5">
+            </div>
+            <div class="info">
+                <div class="cat">San Rio Pen</div>
+                <h2 class="title">Pen Vol. 4</h2>
+                <p class="desc">Limited rare edition pen — introduced at a special event and now available online.</p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/pencils (6).jpeg" alt="Button Pen Set 6">
+            </div>
+            <div class="info">
+                <div class="cat">San Rio Pen</div>
+                <h2 class="title">Pochacco Pen</h2>
+                <p class="desc">Pochacco the cute dog pen </p>
+                <div class="bottom">
+                    <div class="price">BZ$4</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

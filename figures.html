@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figures - Geeky BZ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #eed5ff 0%, #f3e5f5 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin-bottom: 30px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        color: #ab04e8;
+        transform: translateX(-5px);
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        transition: .3s;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+    }
+
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ab04e8;
+        color: #fff;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 30px;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(171, 4, 232, 0.3);
+    }
+
+    .img-box {
+        height: 250px;
+        overflow: hidden;
+        background: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .img-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform .5s ease;
+    }
+
+    .card:hover .img-box img {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    .info {
+        padding: 25px;
+    }
+
+    .cat {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ab04e8;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #333;
+        margin: 0 0 12px;
+        line-height: 1.2;
+    }
+
+    .desc {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .price {
+        font-size: 22px;
+        font-weight: 800;
+        color: #333;
+    }
+
+    .btn {
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ab04e8;
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1 style="font-weight: 800; margin-bottom: 40px; color: #333;">Figures Collection</h1>
+    </div>
+
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="badge">New</div>
+            <div class="img-box">
+                <img src="products/figure (1).jpeg" alt="Figure 1">
+            </div>
+            <div class="info">
+                <div class="cat">Scale Figure</div>
+                <h2 class="title">Turbo Granny Figure</h2>
+                <p class="desc">Hyper-detailed 1/7 scale figure with hand-painted finishing and dynamic posing.</p>
+                <div class="bottom">
+                    <div class="price">BZ$35</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/figure (2).jpeg" alt="Figure 2">
+            </div>
+            <div class="info">
+                <div class="cat">Nendoroid</div>
+                <h2 class="title">Armin Arlert Figure</h2>
+                <p class="desc">Cute chibi nendoroid figure — fully posable with interchangeable face plates.</p>
+                <div class="bottom">
+                    <div class="price">BZ$12</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="badge">Sale</div>
+            <div class="img-box">
+                <img src="products/figure (3).jpeg" alt="Figure 3">
+            </div>
+            <div class="info">
+                <div class="cat">Action Figure</div>
+                <h2 class="title">Keisuke Baji Figure</h2>
+                <p class="desc">Fully articulated action figure with multiple points of articulation and accessories.
+                </p>
+                <div class="bottom">
+                    <div class="price">BZ$8</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/figure (4).jpeg" alt="Figure 4">
+            </div>
+            <div class="info">
+                <div class="cat">Statue</div>
+                <h2 class="title">No-Face Figure</h2>
+                <p class="desc">Solid-cast resin statue with intricate sculpted details and a weighted base.</p>
+                <div class="bottom">
+                    <div class="price">BZ$8</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/figure (5).jpeg" alt="Figure 5">
+            </div>
+            <div class="info">
+                <div class="cat">Scale Figure</div>
+                <h2 class="title">Light Yagami Figure</h2>
+                <p class="desc">Limited run rare scale figure — only a handful exist, grab yours while it lasts.</p>
+                <div class="bottom">
+                    <div class="price">BZ$8</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/figure (6).jpeg" alt="Figure 6">
+            </div>
+            <div class="info">
+                <div class="cat">Action Figure</div>
+                <h2 class="title">Mahito Figure</h2>
+                <p class="desc">A follow-up fan-favourite articulated figure complete with effect parts and stand.</p>
+                <div class="bottom">
+                    <div class="price">BZ$12</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <div class="badge">New</div>
+            <div class="img-box">
+                <img src="products/figures (1).jpeg" alt="Figures Set 1">
+            </div>
+            <div class="info">
+                <div class="cat">Blind Box</div>
+                <h2 class="title">Kuromi Figure</h2>
+                <p class="desc">Surprise blind box figure — one of six characters, shipped at random.</p>
+                <div class="bottom">
+                    <div class="price">BZ$18</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <div class="img-box">
+                <img src="products/figures (2).jpeg" alt="Figures Set 2">
+            </div>
+            <div class="info">
+                <div class="cat">Blind Box</div>
+                <h2 class="title">Goku Black (Super Saiyan Blue) Figure</h2>
+                <p class="desc">Second series of the popular blind box line — new characters and secret rare.</p>
+                <div class="bottom">
+                    <div class="price">BZ$12</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <div class="badge">Sale</div>
+            <div class="img-box">
+                <img src="products/figures (3).jpeg" alt="Figures Set 3">
+            </div>
+            <div class="info">
+                <div class="cat">Nendoroid</div>
+                <h2 class="title">Itachi Uchiha Figure</h2>
+                <p class="desc">Second chibi nendoroid in the series — features an exclusive alternate expression set.
+                </p>
+                <div class="bottom">
+                    <div class="price">BZ$12</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
